@@ -1,9 +1,9 @@
-import com.eviware.soapui.config.WorkspaceProjectConfig.Status;
 import com.eviware.soapui.impl.wsdl.WsdlProject;
 import com.eviware.soapui.impl.wsdl.WsdlTestSuite;
 import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase;
 import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCaseRunner;
 import com.eviware.soapui.model.support.PropertiesMap;
+import com.eviware.soapui.model.testsuite.TestRunner.Status;
 
 import junit.framework.Assert;
 
@@ -27,7 +27,7 @@ public class Runner {
 				Assert.assertEquals(Status.FINISHED, status);
 				
 			}
-			System.out.println("heloo..");
+			//System.out.println("heloo..");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
