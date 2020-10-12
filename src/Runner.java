@@ -1,6 +1,11 @@
+import com.eviware.soapui.config.WorkspaceProjectConfig.Status;
 import com.eviware.soapui.impl.wsdl.WsdlProject;
 import com.eviware.soapui.impl.wsdl.WsdlTestSuite;
 import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase;
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestCaseRunner;
+import com.eviware.soapui.model.support.PropertiesMap;
+
+import junit.framework.Assert;
 
 public class Runner {
 
@@ -18,8 +23,8 @@ public class Runner {
 			{
 				WsdlTestCase tc=requiredTestSuiteName.getTestCaseAt(testcase);
 				System.out.println(" Test case :"+tc);
-				//WsdlTestCaseRunner status=tc.run(new PropertiesMap(), false);//tc.run(new PropertiesMap(), false);
-				//Assert.assertEquals(Status.FINISHED, status);
+				WsdlTestCaseRunner status=tc.run(new PropertiesMap(), false);//tc.run(new PropertiesMap(), false);
+				Assert.assertEquals(Status.FINISHED, status);
 				
 			}
 			System.out.println("heloo..");
